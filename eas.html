@@ -1,7 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+  <link rel="stylesheet" type="text/css" href="style.css">
 <meta charset="utf-8"/>
-<title></title>
+<title>
+</title>
 </head>
+
 <body>
+
+<div class="etchhead">
+  <p> Choose your grid size </p>
+  <input type = "text"></input>
+  <button> Clear Grid </button>
+  <p> Change color </p>
+</div>
+
+<div id="grid">
+</div>
+
+<script>
+
+
+for (boxes = 0; boxes < 256; boxes++){
+  var selectBody = document.querySelector("#grid");
+  var addBox = document.createElement("div");
+  var size = 256
+  addBox.classList.add("gridBox");
+  addBox.textContent = (" ");
+  selectBody.appendChild(addBox);
+};
+
+var container = document.querySelector("#grid");
+var divSelector = container.querySelectorAll("div");
+  divSelector.forEach((div) => {
+      div.addEventListener("mouseover", (event) => {
+        event.target.style.backgroundColor = "grey";
+});
+});
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+p {
+  color: blue;
+  display: inline;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(16,1fr);
+  grid-template-rows: repeat(16,1fr);
+  width: 800px;
+  max-width: 800px;
+  height: 800px;
+  max-height: 800px;
+  line-height: 0;
+
+}
+
+.gridBox {
+  width: auto;
+  float: left;
+  border:  1px solid black;
+  background-color: lightgrey;
+}
