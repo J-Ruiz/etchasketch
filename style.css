@@ -1,20 +1,19 @@
-p {
-  color: blue;
-  display: inline;
-}
+        p {
+          color: blue;
+          display: inline;
+      }
 
-#grid {
-  display: grid;
-  width: 940px;
-  max-width: 940px;
-  height: 940px;
-  max-height: 940px;
-  line-height: 0;
+        #grid {
+          display: grid;
+          width: 800px;
+          max-width: 800px;
+          height: 800px;
+          max-height: 800px;
+          line-height: 0;
 
-}
+        }
 
-.gridBox {
-  width: auto;
-  border:  1px solid black;
-  background-color: lightgrey
-}
+        .gridBox {
+          border:  1px solid black;
+          background-color: lightgrey
+        }

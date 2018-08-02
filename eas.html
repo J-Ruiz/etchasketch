@@ -1,68 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" type="text/css" href="style.css">
-<meta charset="utf-8"/>
-<title>
-</title>
-</head>
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <meta charset="utf-8"/>
+      <title>
+      </title>
+    </head>
+    <body>
+      <div class="etchhead">
+      <button type ="button" id="erase"> Erase your Etch-A-Sketch </button>
+    </div>
 
-<body>
+    <div id="grid">
+    </div>
 
-<div class="etchhead">
-  <p> Choose your grid size </p>
-  <input type = "text"></input>
-  <button id="startOver"> Clear Grid </button>
-  <p> Change color </p>
-</div>
+    <script src="eas.js"></script>
 
-<div id="grid">
-</div>
-
-<script>
-
-gridStart();
-
-
-function gridStart(){
-var boxes = 0
-var selectBody = document.querySelector("#grid");
-var addBox = document.createElement("div");
-var boxCountStart = prompt("enter a number between 16 and 64");
-var boxDimensions = (boxCountStart * boxCountStart);
-
-  function rowsAndColumns() {
-    var selectBody = document.querySelector("#grid");
-    var gridTemplateColumns = 'repeat('+boxCountStart+', 1fr)';
-    selectBody.style.gridTemplateColumns= gridTemplateColumns;
-    selectBody.style.gridTemplateRows= gridTemplateColumns;
-};
-
-  function hoverColor(){
-    var divSelector = selectBody.querySelectorAll("div");
-    divSelector.forEach((div) => {
-        div.addEventListener("mouseover", (event) => {
-          event.target.style.backgroundColor = "grey";
-});
-});
-};
-
-rowsAndColumns();
-
-for (boxes = 0; boxes < boxDimensions ; boxes++) {
-  var selectBody = document.querySelector("#grid");
-  var addBox = document.createElement("div");
-        addBox.classList.add("gridBox");
-        addBox.textContent = (" ");
-        selectBody.appendChild(addBox);
-        hoverColor();
-};
-};
-
-
-
-
-</script>
-
-</body>
-</html>
+    </body>
+    </html>
